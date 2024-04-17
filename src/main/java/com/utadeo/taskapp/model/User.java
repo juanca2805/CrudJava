@@ -7,55 +7,59 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "users")
+@Table(name = "\"USER\"")
 public class User {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long id;
 
-    private Long id;
-    private String name;
-    private String lastName;
-    private int age;
+  private String name;
+  private String lastName;
+  private int age;
 
-    User(){}
 
-    User(String name, String lastName, int age){
-        this.name = name;
-        this.lastName = lastName;
-        this.age = age;
-    }
+  public User() {
+  }
 
-    public Long getId() {
-        return id;
-    }
+  public User(String name, String lastName, int age){
+    this.name = name;
+    this.lastName = lastName;
+    this.age = age;
+  }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
 
-    public String getName() {
-        return name;
-    }
 
-    public void setName(String name) {
-        this.name = name;
-    }
+  public Long getId() {
+    return id;
+  }
 
-    public String getLastName() {
-        return lastName;
-    }
+  public void setId(Long id) {
+    this.id = id;
+  }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
+  public String getName() {
+    return name;
+  }
 
-    public int getAge() {
-        return age;
-    }
+  public void setName(String name) {
+    this.name = name;
+  }
 
-    public void setAge(int age) {
-        this.age = age;
-    }
+  public String getLastName() {
+    return lastName;
+  }
 
-    
+  public void setLastName(String lastName) {
+    this.lastName = lastName;
+  }
+
+  public int getAge() {
+    return age;
+  }
+
+  public void setAge(int age) {
+    this.age = age;
+  }
+
+
 }
